@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
+import { icons } from "../../editable-stuff/config";
 
 const ProjectCard = ({ value }) => {
    const { name, description, url, languages, state } = value;
@@ -21,7 +22,9 @@ const ProjectCard = ({ value }) => {
                      <i className={`fab fa-${val}`} />
                   </span>
                ))} */}
-               {state ? <span>Live</span> : <span>In Progress...</span>}
+               {state ?
+                   <i class={icons.complete}>  Live</i>:
+                    <i class={icons.inProgress}>  In Progress</i>}
             </Card.Body>
          </Card>
       </Col>
@@ -32,53 +35,12 @@ const CardButtons = ({ svn_url }) => {
    return (
       <>
          <a href={svn_url} className="btn btn-outline-secondary mr-3">
-            <i className="fab fa-github" /> More details
+            <i class="fas fa-link" />    Details
          </a>
       </>
    );
 };
 
-const Language = ({ languages_url, url }) => {
-   const [data, setData] = useState([]);
-
-   const handleRequest = useCallback(async () => {
-      try {
-         const response = await axios.get(languages_url);
-         return setData(response.data);
-      } catch (error) {
-         console.error(error.message);
-      }
-   }, [languages_url]);
-
-   useEffect(() => {
-      handleRequest();
-   }, [handleRequest]);
-
-   const array = [];
-   let total_count = 0;
-   for (let index in data) {
-      array.push(index);
-      total_count += data[index];
-   }
-
-   return (
-      <div className="pb-3">
-         Languages:{" "}
-         {array.length
-            ? array.map((language) => (
-                 <a
-                    key={language}
-                    className="badge badge-light card-link"
-                    href={url + `/search?l=${language}`}
-                    target=" _blank"
-                 >
-                    {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %
-                 </a>
-              ))
-            : "code yet to be deployed."}
-      </div>
-   );
-};
 
 const CardFooter = ({ star_count, url, pushed_at }) => {
    const [updated_at, setUpdated_at] = useState("0 mints");
