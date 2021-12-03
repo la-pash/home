@@ -13,23 +13,19 @@ const mainBody = {
    icons: [
       {
          image: "fa-github",
-         url: "https://github.com/hashirshoaeb",
+         url: "https://github.com/la-pash",
       },
       {
          image: "fa-facebook",
-         url: "https://www.facebook.com/hashirshoaeb",
+         url: "https://www.facebook.com/pashanga00",
       },
       {
          image: "fa-instagram",
-         url: "https://www.instagram.com/hashirshoaeb/",
+         url: "https://play.google.com/store/apps/dev?id=8367062324581492914",
       },
       {
          image: "fa-linkedin",
-         url: "https://www.linkedin.com/in/hashirshoaeb/",
-      },
-      {
-         image: "fa-twitter",
-         url: "https://www.twitter.com/hashirshoaeb/",
+         url: "https://www.linkedin.com/in/seif-eddineackharrachi-135684110/",
       },
    ],
 };
@@ -54,9 +50,9 @@ const about = {
    imageLink: require("../editable-stuff/hashirshoaeb.png"),
    imageSize: 375,
    message:
-      "My name is Seif Eddine Kharrachi. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
+      "My name is Seif Eddine Kharrachi. I’m a graduate of 2018 from University of Mohamed Cherif Msaadia with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
    resume:
-      "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+      "https://docs.google.com/document/d/1LqlFvkmEGhDT-HU9hxDa87QuySxdDnVS-612rcP9acU/edit?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -69,8 +65,28 @@ const repos = {
    heading: "Recent Projects",
    gitHubUsername: "la-pash", //i.e."johnDoe12Gh"
    reposLength: 6,
-   specificRepos: [],
+   specificRepos: ["mamouth.js"],
 };
+
+const personalProjects = [
+   {
+      name: "Profiler",
+      url: "https://play.google.com/store/apps/details?id=pashanga.app.profiler",
+      description:
+         "Cross-Platfrom Mobile App ,Depends on user's social network url's to generate a QR code that can be shared instantly",
+   },
+   {
+      name: "Pashanga",
+      url: "https://play.google.com/store/apps/details?id=pashanga.shrinder.app",
+      description:
+         "Android Mobile App ,Uses NFC technology to share profiles as Data in 100 meters range OFFLINE ",
+   },
+   {
+      name: "Deaz",
+      url: "https://deaz.netlify.app",
+      description: "COVID-19 statistical website built using React.js",
+   },
+];
 
 // Leadership SECTION
 const leadership = {
@@ -127,7 +143,7 @@ const getInTouch = {
    show: true,
    heading: "Get In Touch",
    message:
-      "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+      "I'm currently working as a FULL-TIME React-Native Developer at WHITE BAY LIMITED located in Algeria / Alger",
    email: "seifkharrachi@gmail.com",
 };
 
@@ -153,4 +169,14 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export {
+   navBar,
+   personalProjects,
+   mainBody,
+   about,
+   repos,
+   skills,
+   leadership,
+   getInTouch,
+   experiences,
+};
