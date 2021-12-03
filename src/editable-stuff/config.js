@@ -20,7 +20,7 @@ const mainBody = {
          url: "https://www.facebook.com/pashanga00",
       },
       {
-         image: "fa-instagram",
+         image: "fab fa-google-play",
          url: "https://play.google.com/store/apps/dev?id=8367062324581492914",
       },
       {
@@ -47,7 +47,7 @@ const mainBody = {
 const about = {
    show: true,
    heading: "About Me",
-   imageLink: require("../editable-stuff/hashirshoaeb.png"),
+   profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
    imageSize: 375,
    message:
       "My name is Seif Eddine Kharrachi. I’m a graduate of 2018 from University of Mohamed Cherif Msaadia with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
@@ -65,26 +65,39 @@ const repos = {
    heading: "Recent Projects",
    gitHubUsername: "la-pash", //i.e."johnDoe12Gh"
    reposLength: 6,
-   specificRepos: ["mamouth.js"],
+   specificRepos: [],
 };
 
 const personalProjects = [
    {
       name: "Profiler",
       url: "https://play.google.com/store/apps/details?id=pashanga.app.profiler",
+      languages: ["React-Native"],
+      state: false,
       description:
          "Cross-Platfrom Mobile App ,Depends on user's social network url's to generate a QR code that can be shared instantly",
    },
    {
       name: "Pashanga",
       url: "https://play.google.com/store/apps/details?id=pashanga.shrinder.app",
+      languages: ["Android"],
+      state: true,
       description:
          "Android Mobile App ,Uses NFC technology to share profiles as Data in 100 meters range OFFLINE ",
    },
    {
       name: "Deaz",
       url: "https://deaz.netlify.app",
+      languages: ["React.js", "HTML", "CSS"],
+      state: true,
       description: "COVID-19 statistical website built using React.js",
+   },
+   {
+      name: "Mammoth.js",
+      url: "https://github.com/la-pash/mammoth.js",
+      languages: ["Javascript", "HTML"],
+      state: false,
+      description: "Open source project .Convert Word documents (.docx files) to HTML",
    },
 ];
 

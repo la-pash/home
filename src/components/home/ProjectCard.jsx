@@ -5,8 +5,7 @@ import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
 const ProjectCard = ({ value }) => {
-   const languages_url = false;
-   const { name, description, url } = value;
+   const { name, description, url, languages, state } = value;
    return (
       <Col md={6}>
          <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -17,25 +16,23 @@ const ProjectCard = ({ value }) => {
                </Card.Text>
                {url ? <CardButtons svn_url={url} /> : <Skeleton count={2} />}
                <hr />
-               {languages_url ? (
-                  <Language languages_url={languages_url} repo_url={url} />
-               ) : (
-                  <Skeleton count={3} />
-               )}
+               {/* {languages.map((val) => (
+                  <span key={val}>
+                     <i className={`fab fa-${val}`} />
+                  </span>
+               ))} */}
+               {state ? <span>Live</span> : <span>In Progress...</span>}
             </Card.Body>
          </Card>
       </Col>
    );
 };
 
-const CardButtons = ({ url }) => {
+const CardButtons = ({ svn_url }) => {
    return (
       <>
-         <a href={`${url}/archive/master.zip`} className="btn btn-outline-secondary mr-3">
-            <i className="fab fa-github" /> Clone Project
-         </a>
-         <a href={url} target=" _blank" className="btn btn-outline-secondary">
-            <i className="fab fa-github" /> Repo
+         <a href={svn_url} className="btn btn-outline-secondary mr-3">
+            <i className="fab fa-github" /> More details
          </a>
       </>
    );
