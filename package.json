@@ -1,7 +1,7 @@
 {
    "name": "personal-portfolio",
    "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
-   "homepage": "http://la-pash.github.io/home",
+   "homepage": "https://la-pash.github.io/home",
    "version": "2.0.0",
    "private": true,
    "author": {
